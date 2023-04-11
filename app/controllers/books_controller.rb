@@ -9,16 +9,11 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     if  @book.save
       flash[:notice] = "Book was successfully created."
-      redirect_to books_path
+      redirect_to book_path(@book.id)
     else
       @books = Book.all
-      flash.now[:alert] = "Failed to create book."
       render :index
     end
-  end
-
-  def new
-    @book = Book.new
   end
 
   def show

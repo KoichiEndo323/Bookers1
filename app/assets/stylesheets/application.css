@@ -8,6 +8,7 @@ body{
   margin:33px;
   line-height: 18px;
   font-size: 13px;
+  display: block;
 }
 
 p,ol,ul,td{
@@ -27,5 +28,9 @@ h1,h2{
 }
 
 label{
+  display: block;
+}
+
+div{
   display: block;
 }
